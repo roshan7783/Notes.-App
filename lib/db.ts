@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGO_URI = process.env.MONGO_URI;
 
-if (!MONGODB_URI) {
-  throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
+if (!MONGO_URI) {
+  throw new Error('Please define the MONGO_URI environment variable inside .env');
 }
 
 interface MongooseCache {
@@ -28,8 +28,8 @@ async function dbConnect() {
       bufferCommands: false,
     };
 
-    cached.promise = mongoose.connect(MONGODB_URI!, opts).then((mongoose) => {
-      console.log('✅ MongoDB connected successfully to:', MONGODB_URI);
+    cached.promise = mongoose.connect(MONGO_URI!, opts).then((mongoose) => {
+      console.log('✅ MongoDB connected :', MONGO_URI);
       return mongoose;
     });
   }
