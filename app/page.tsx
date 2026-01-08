@@ -86,7 +86,7 @@ export default function Home() {
           className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-purple-300 mb-4"
         >
           <Sparkles className="w-3 h-3" />
-          <span>Workspace</span>
+          <span>roshan7783</span>
         </motion.div>
         
         <motion.h1 
